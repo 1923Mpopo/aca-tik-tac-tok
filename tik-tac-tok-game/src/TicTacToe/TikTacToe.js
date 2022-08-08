@@ -3,7 +3,7 @@ import './TicTacToe.css';
 
 const TikTacToe  = () => {
 
-    const [turn,setTurn] = useState('x');
+    const [turn,setTurn] = useState('X');
     const [cells,setCells] = useState(Array(9).fill(''));
     const [winner,setWinner] = useState();
 
@@ -52,12 +52,12 @@ const TikTacToe  = () => {
 
         let squares = [...cells];
 
-        if (turn === 'x'){
-            squares[num]= 'x';
-            setTurn('o');
+        if (turn === 'X'){
+            squares[num]= 'X';
+            setTurn('O');
         } else{
-            squares[num]= 'o';
-            setTurn('x')
+            squares[num]= 'O';
+            setTurn('X')
         }
 
         checkForWinner(squares);
@@ -76,9 +76,10 @@ const TikTacToe  = () => {
    
 
     return (
+        
         <div className="container">
             <table>
-                Turn:{turn};
+               <h1 className='heading'>Player 's Turn:</h1> {turn}
                 <tbody>
                     <tr>
                         <Cell num={0}/>
@@ -99,8 +100,8 @@ const TikTacToe  = () => {
             </table>
             {winner &&( 
             <>
-            <p>{winner} is the winner!</p>
-            <button onClick={() =>handleRestart()}>Play Again</button>
+            <p className='winnerMessage'>{winner} is the winner!</p>
+            <button onClick={() =>handleRestart()} className="playagainbtn"><b>Play Again</b></button>
             </>)}
         </div>
     )

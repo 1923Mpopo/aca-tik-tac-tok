@@ -3,12 +3,51 @@
     display:flex;
     justify-content: center;
     flex-direction:column;
-    width:500px;
+    width:1350px;
+    height:480px;
     align-items: center;
+    background-color: aqua;
 }
 
 table td{
     border: 1px solid grey;
     width: 100px;
     height:100px;
+    background-color: indianred;
+}
+.heading{
+    font-size: small;
+}
+
+.winnerMessage{
+    font-size: large;
+}
+.header{
+    background-color: blue;
+    color:azure;
+    width:1320px;
+    height:40px;
+    align-items: center;
+    padding:18px;
+    font-size: large;
+
+}
+
+.footer{
+    background-color: blue;
+    color:azure;
+    width:1330px;
+    height:40px;
+    align-items: center;
+    padding:10px;
+    font-size: large;
+}
+
+.playagainbtn{
+    background-color: blue;
+    color:azure;
+    width:190px;
+    height:40px;
+    border-radius:6px;
+    border: none;
 }
